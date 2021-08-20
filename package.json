@@ -1,6 +1,6 @@
 {
   "name": "vmmock",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "生成测试数据的包",
   "main": "index.js",
   "author": "jacklastone",

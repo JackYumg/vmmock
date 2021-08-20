@@ -82,6 +82,7 @@ VMMock.prototype.mouteAxios = function (axios) {
                 const result = this.parser.parseTemplateOption(matched.type, matched.option);
                 await BaseHelper.sleep(timeout);
                 if (logger) {
+                    config.data = result;
                     console.log(`%c[👽->${config.method}->Response]:${config.url}`, "background:rgba(133,108,217,1);color:#fff", { Response: config });
                 }
                 return Promise.resolve(result || '');
