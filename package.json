@@ -1,10 +1,15 @@
 {
   "name": "vmmock",
-  "version": "1.0.0",
+  "version": "~1.0.0",
   "description": "生成测试数据的包",
   "main": "index.js",
-  "author": "jackyumg",
+  "author": "jacklastone",
   "license": "MIT",
+  "keywords": ["mock"],
+  "repository": {
+    "url": "https://github.com/JackYumg/vmmock.git"
+  },
+  "homepage": "https://github.com/JackYumg/vmmock",
   "scripts": {
     "build": "rollup --config rollup.config.js",
     "test": "jest"
