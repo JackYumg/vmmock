@@ -1,4 +1,4 @@
-export const AddressConverter = {
+const AddressConverter = {
     tree: (list) => {
         var mapped = {}
         for (var i = 0, item; i < list.length; i++) {
@@ -46,3 +46,5 @@ export const AddressConverter = {
         return this.tree(fixed);
     }
 }
+
+export default AddressConverter;

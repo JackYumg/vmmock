@@ -1,5 +1,4 @@
-import { AddressConverter } from "./Address.converter"
-
+import AddressConverter from './Address.converter';
 const AllDICT = {
     "110000": "北京",
     "110100": "北京市",

@@ -1,18 +1,17 @@
-import { CN_NAME, CN_SURNAMES } from "./Name.data";
 import ArrayHelper from './../../util/ArrayHelper';
-
+import NAMES_DICS from './Name.data';
 const NameBuilder = {
     cnFirst: () => {
-        return ArrayHelper.pick(CN_SURNAMES);
+        return ArrayHelper.pick(NAMES_DICS.CN_SURNAMES);
     },
     cnlast: () => {
-        return ArrayHelper.pick(CN_NAME, 1, 2);
+        return ArrayHelper.pick(NAMES_DICS.CN_NAME, 1, 2);
     },
     cnName: function () {
         return `${this.cnFirst()}${this.cnlast()}`;
     },
     cnFXFirst(){
-        return ArrayHelper.pick(CN_SURNAMES.filter( e => e.length >1));
+        return ArrayHelper.pick(NAMES_DICS.CN_SURNAMES.filter( e => e.length >1));
     },
     cnFXName() {
         return `${this.cnFXFirst()}${this.cnlast()}`;
