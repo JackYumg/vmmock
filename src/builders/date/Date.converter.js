@@ -1,4 +1,4 @@
-import patternLetters from './Date.date';
+import { patternLetters } from "./Date.date";
 
 function regexpFn() {
     var re = [];

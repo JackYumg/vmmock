@@ -3,7 +3,7 @@
 
     字典数据来源 [A nicer color palette for the web](http://clrs.cc/)
 */
- const ColorDict = {
+ export const ColorDict = {
     // name value nicer
     navy: {
         value: '#000080',
@@ -74,5 +74,3 @@
         nicer: '#FFFFFF'
     }
 }
-
-export default ColorDict;

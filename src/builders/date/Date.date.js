@@ -1,5 +1,5 @@
 // 日期占位符集合。
-const patternLetters = {
+export const patternLetters = {
     yyyy: 'getFullYear',
     yy: function (date) {
         return ('' + date.getFullYear()).slice(2)
@@ -59,5 +59,3 @@ const patternLetters = {
     },
     T: 'getTime'
 }
-
-export default patternLetters;

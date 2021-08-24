@@ -1,5 +1,5 @@
 import ColorConverter from './Color.converter';
-import ColorDict from './Color.data';
+import { ColorDict } from './Color.data';
 const ColorBuilder = {
     // 随机生成一个有吸引力的颜色，格式为 '#RRGGBB'。
     color: function (name) {

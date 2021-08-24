@@ -1,6 +1,6 @@
 import ArrayHelper from "../../util/ArrayHelper"
 import Basic from "../basic/Basic"
-import FIXED_DICT from './Address.data';
+import { FIXED_DICT } from "./Address.data"
 
 var REGION = ['东北', '华北', '华东', '华中', '华南', '西南', '西北']
 

@@ -247,8 +247,8 @@ const ImageBuilder = {
 
                 PS：node-canvas 的安装过程实在是太繁琐了，所以不放入 package.json 的 dependencies。
              */
-            var Canvas = module.require('canvas')
-            canvas = new Canvas()
+            // var Canvas = module.require('canvas')
+            // canvas = new Canvas()
         }
 
         var ctx = canvas && canvas.getContext && canvas.getContext("2d")

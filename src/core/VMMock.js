@@ -1,13 +1,13 @@
 import Parser from './Parser';
 import { BaseHelper } from './../util/BaseHelper';
-import { pathToRegexp, match } from 'path-to-regexp';
+// import MockXMLHttpRequest from '../net/xhr';
 const urld = require('url');
 
 function VMMock() {
 
 }
 
-VMMock.prototype.parser = new Parser();
+VMMock.prototype.parser = Parser;
 
 /**
  * 
@@ -25,6 +25,7 @@ VMMock.prototype.generate = function (template, moreOption) {
  */
 VMMock.prototype.setUp = function (option) {
     this.option = option;
+    // if (MockXMLHttpRequest) window.XMLHttpRequest = MockXMLHttpRequest
 }
 
 VMMock.prototype.setMockData = function (data = []) {

@@ -36,5 +36,50 @@ export const BaseHelper = {
                 resolve(true);
             }, time);
         });
+    },
+    type: function (obj) {
+        return (obj === null || obj === undefined) ? String(obj) : Object.prototype.toString.call(obj).match(/\[object (\w+)\]/)[1].toLowerCase()
+    },
+    keys: function (obj) {
+        var keys = [];
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) keys.push(key)
+        }
+        return keys;
+    },
+    extend: function () {
+        var target = arguments[0] || {},
+            i = 1,
+            length = arguments.length,
+            options, name, src, copy, clone
+
+        if (length === 1) {
+            target = this
+            i = 0
+        }
+
+        for (; i < length; i++) {
+            options = arguments[i]
+            if (!options) continue
+
+            for (name in options) {
+                src = target[name]
+                copy = options[name]
+
+                if (target === copy) continue
+                if (copy === undefined) continue
+
+                if (this.isArray(copy) || this.isObject(copy)) {
+                    if (this.isArray(copy)) clone = src && this.isArray(src) ? src : []
+                    if (this.isObject(copy)) clone = src && this.isObject(src) ? src : {}
+
+                    target[name] = this.extend(clone, copy)
+                } else {
+                    target[name] = copy
+                }
+            }
+        }
+
+        return target
     }
 }

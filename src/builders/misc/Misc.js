@@ -1,4 +1,4 @@
-const { default: FIXED_DICT } = require("../address/address.data")
+import { FIXED_DICT } from '../address/Address.data';
 import Basic from '../basic/Basic';
 import ArrayHelper from './../../util/ArrayHelper';
 import DateBuilder from './../date/Date';
@@ -54,11 +54,11 @@ const MiscBuilder = {
     */
     guid: function () {
         var pool = "abcdefABCDEF1234567890",
-            guid = this.string(pool, 8) + '-' +
-                this.string(pool, 4) + '-' +
-                this.string(pool, 4) + '-' +
-                this.string(pool, 4) + '-' +
-                this.string(pool, 12);
+            guid = Basic.string(pool, 8) + '-' +
+                Basic.string(pool, 4) + '-' +
+                Basic.string(pool, 4) + '-' +
+                Basic.string(pool, 4) + '-' +
+                Basic.string(pool, 12);
         return guid
     },
     uuid: function () {

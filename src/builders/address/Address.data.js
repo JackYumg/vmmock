@@ -3999,5 +3999,4 @@ const AllDICT = {
 }
 
 
-const FIXED_DICT = AddressConverter.builderData(AllDICT);
-export default FIXED_DICT;
+export const FIXED_DICT = AddressConverter.builderData(AllDICT);
